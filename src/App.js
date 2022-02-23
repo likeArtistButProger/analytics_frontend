@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Routes from "./router/Routes";
