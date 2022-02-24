@@ -32,7 +32,7 @@ const HeroBannerEleven = () => {
           {/* End .col-xl-7 */}
 
           <div className="illustration-container">
-            <img src="images/assets/ils-02.png" alt="illustration" />
+            <img src="images/assets/main_screen.png" alt="illustration" />
           </div>
         </div>
         {/* Emd .row */}

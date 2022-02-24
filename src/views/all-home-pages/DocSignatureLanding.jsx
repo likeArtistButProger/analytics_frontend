@@ -79,17 +79,17 @@ const DocSignatureLanding = () => {
       {/* =============================================
             Video Box Two
         ==============================================  */}
-      <div className="video-box-two lg-container mt-200 md-mt-100">
+      {/* <div className="video-box-two lg-container mt-200 md-mt-100">
         <div className="container">
           <FancyVideoFour />
         </div>
-      </div>
+      </div> */}
       {/* /.video-box-two */}
 
       {/* =====================================================
             Fancy Text block Twenty Three
         ===================================================== */}
-      <div
+      {/* <div
         className="fancy-text-block-twentyThree lg-container pt-200 mt-30 md-pt-90"
         id="feature"
       >
@@ -112,7 +112,6 @@ const DocSignatureLanding = () => {
                 </a>
               </div>
             </div>
-            {/* End .col */}
 
             <div className="col-lg-6" data-aos="fade-right">
               <div className="img-container position-relative md-mt-60">
@@ -128,7 +127,6 @@ const DocSignatureLanding = () => {
                 />
               </div>
             </div>
-            {/* End .col */}
           </div>
         </div>
 
@@ -137,13 +135,13 @@ const DocSignatureLanding = () => {
             <FancyFeatureTewentyEight />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* /.fancy-text-block-twentyThree --> */}
 
       {/* =====================================================
             Useable Tools Four
         ===================================================== */}
-      <div className="useable-tools-section-four lg-container mt-200 md-mt-100">
+      {/* <div className="useable-tools-section-four lg-container mt-200 md-mt-100">
         <div className="bg-wrapper">
           <div className="container">
             <div className="row">
@@ -161,27 +159,24 @@ const DocSignatureLanding = () => {
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                   </a>
                 </div>
-                {/* /.text-wrapper */}
               </div>
               <div className="col-xl-5 col-lg-6 ml-auto">
                 <div className="logo-container h-100">
                   <div className="inner-wrapper">
                     <BrandSix />
                   </div>
-                  {/* /.inner-wrapper */}
                 </div>
-                {/* /.logo-container */}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* /.useable-tools-section-four */}
 
       {/* =============================================
             Fancy Feature Twenty Eight
         ==============================================  */}
-      <div
+      {/* <div
         className="fancy-feature-twentyEight lg-container pt-150 mt-50 md-pt-70"
         id="story"
       >
@@ -208,13 +203,13 @@ const DocSignatureLanding = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* /.fancy-feature-twentyEight */}
 
       {/* =====================================================
             Pricing Section Eight
         ===================================================== */}
-      <div
+      {/* <div
         className="pricing-section-eight lg-container mt-150 md-mt-100"
         id="pricing"
       >
@@ -233,17 +228,16 @@ const DocSignatureLanding = () => {
               </p>
             </div>
           </div>
-          {/* End title */}
 
           <PricingEight />
         </div>
-      </div>
+      </div> */}
       {/* /.Pricing Section Eight */}
 
       {/* =====================================================
             Faq Section Five
         ===================================================== */}
-      <div
+      {/* <div
         className="faq-section-five lg-container pt-200 mt-25 md-pt-80"
         id="faq"
       >
@@ -268,7 +262,7 @@ const DocSignatureLanding = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* /.fqa-section-five */}
 
       {/* =====================================================

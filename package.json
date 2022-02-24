@@ -7,7 +7,9 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@web3-react/core": "^6.1.9",
     "aos": "^2.3.4",
+    "ethers": "^5.5.4",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-accessible-accordion": "^3.3.5",
@@ -31,6 +33,7 @@
     "simple-react-lightbox": "^3.6.6",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.0.1",
+    "web3-react": "^5.0.5",
     "yup": "^0.32.9"
   },
   "scripts": {

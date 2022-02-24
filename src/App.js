@@ -2,8 +2,17 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Routes from "./router/Routes";
 import ScrollToTop from "./components/ScrollToTop";
+import { Web3ReactProvider } from "@web3-react/core";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ethers } from "ethers";
+
+const getLibrary = (connector) => {
+  const library = new ethers.providers.Web3Provider(connector);
+  library.pollingInterval = 15000;
+
+  return library;
+}
 
 const App = () => {
   useEffect(() => {
@@ -13,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Web3ReactProvider getLibrary={getLibrary}>
       <Helmet>
         <title>Deski - Saas & Software React Template</title>
         <meta property="og:site_name" content="deski" />
@@ -40,7 +49,7 @@ const App = () => {
 
       <ScrollToTop />
       <Routes />
-    </>
+    </Web3ReactProvider>
   );
 };
 

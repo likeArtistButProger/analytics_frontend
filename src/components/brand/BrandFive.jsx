@@ -5,29 +5,37 @@ import "slick-carousel/slick/slick-theme.css";
 
 const LogoSlider = [
   {
-    img: "logo-1",
+    img: "logo_01",
     url: "",
   },
   {
-    img: "logo-2",
+    img: "logo_02",
     url: "",
   },
   {
-    img: "logo-3",
+    img: "logo_03",
     url: "",
   },
   {
-    img: "logo-4",
+    img: "logo_04",
     url: "",
   },
   {
-    img: "logo-6",
+    img: "logo_05",
     url: "",
   },
   {
-    img: "logo-3",
+    img: "logo_06",
     url: "",
   },
+  {
+    img: "logo_07",
+    url: "",
+  },
+  {
+    img: "logo_08",
+    url: "",
+  }
 ];
 
 const BrandFive = () => {
@@ -68,7 +76,7 @@ const BrandFive = () => {
         <div className="item" key={i}>
           <div className="img-meta d-flex align-items-center justify-content-center">
             <a href={val.url}>
-              <img src={`images/logo/${val.img}.png`} alt="logo" />
+              <img width={110} height={90} src={`images/logo/${val.img}.png`} alt="logo" />
             </a>
           </div>
         </div>
