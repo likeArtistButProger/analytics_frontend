@@ -1,6 +1,4 @@
-import { Connectors } from "web3-react";
-
-const { InjectedConnector } = Connectors;
+import { InjectedConnector } from "@web3-react/injected-connector";
 
 const Injected = new InjectedConnector({
     supportedNetworks: [1, 10, 56, 42161]

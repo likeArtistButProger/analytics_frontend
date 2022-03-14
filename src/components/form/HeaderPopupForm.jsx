@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { useWeb3React } from "@web3-react/core";
+import { Injected } from "../../constants/connectors";
+import { signWallet } from "../../api/sign-wallet";
 
 const HeaderPopupForm = () => {
+  const { account, chainId, activate } = useWeb3React();
+
   // for validation
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required(" Name is required"),
+    // name: Yup.string().required(" Name is required"),
     email: Yup.string()
       .required("Email is required")
       .email("Entered value does not match email format"),
-    sendMessage: Yup.string().required("Please,leave us a message."),
+    // sendMessage: Yup.string().required("Please,leave us a message."),
   });
 
   const formOptions = { resolver: yupResolver(validationSchema) };
@@ -19,10 +24,22 @@ const HeaderPopupForm = () => {
   const { errors } = formState;
 
   function onSubmit(data, e) {
+    activate(Injected, (err) => {
+      console.log(err);
+    });
+
     // display form data on success
     console.log("Message submited: " + JSON.stringify(data));
     e.target.reset();
   }
+
+  useEffect(() => {
+    console.log(account, chainId);
+    if(!!account && !!chainId) {
+      // console.log(formState);
+      signWallet(chainId, account, formState.email);
+    }
+  }, [account, chainId]);
 
   return (
     <>
