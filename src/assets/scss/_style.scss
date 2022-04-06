@@ -1030,6 +1030,7 @@ body .theme-btn-thirteen:hover {
   right: 0;
   background: #fff;
   padding: 30px 70px;
+  margin-top: 30px;
   transition: all 0.4s ease-out;
 }
 .theme-main-menu.bg-none {
@@ -12739,7 +12740,6 @@ body .theme-btn-thirteen:hover {
 }
 .hero-banner-eleven form button {
   position: absolute;
-  right: 10px;
   top: 8px;
   bottom: 8px;
   font-weight: 500;
@@ -12819,7 +12819,8 @@ body .theme-btn-thirteen:hover {
   margin-bottom: 35px;
 }
 .block-style-twentySix .try-btn {
-  width: 145px;
+  // width: ;
+  padding: 0 20px;
   line-height: 41px;
   border-radius: 5px;
   border-style: solid;

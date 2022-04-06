@@ -70,7 +70,7 @@ const HeaderLandingDocSignature = () => {
                     currentClassName="active"
                     offset={-500}
                   >
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <a href="#product" className="nav-link">
                         Product
                       </a>
@@ -94,7 +94,7 @@ const HeaderLandingDocSignature = () => {
                       <a href="#faq" className="nav-link">
                         FAQ’s
                       </a>
-                    </li>
+                    </li> */}
                   </Scrollspy>
                 </div>
               </div>
@@ -102,7 +102,7 @@ const HeaderLandingDocSignature = () => {
           </nav>
           <div className="right-widget">
             <button className="demo-button" onClick={toggleModalOne}>
-              <span>Request A Demo</span>
+              <span>Join Waitlist</span>
               <img src="images/icon/user.svg" alt="icon" />
             </button>
           </div>

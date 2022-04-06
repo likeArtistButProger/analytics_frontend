@@ -20,8 +20,7 @@ const FormEvent = () => {
 
   return (
     <form>
-      <input value={email} onChange={({ target: { value } }) => setEmail(value)} type="text" placeholder="ihidago@ujufidnan.gov" />
-      <button onClick={handleSubmit}>Try free demo</button>
+      <button onClick={handleSubmit}>Join Waitlist</button>
     </form>
   );
 };

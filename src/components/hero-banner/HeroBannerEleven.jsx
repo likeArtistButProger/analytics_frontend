@@ -1,15 +1,26 @@
 import React from "react";
 import FormDemo from "../../components/form/FormDemo";
 import BrandFive from "../../components/brand/BrandFive";
+import qs from "qs";
+import { useTranslation } from "react-i18next";
+import parse from 'html-react-parser';
 
 const HeroBannerEleven = () => {
+  const querystring = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+  const variant = parseInt(querystring.var);
+
+  const { t } = useTranslation();
+
+  const abTestText = parse(t(`var-${variant}`));
+
   return (
     <div className="hero-banner-eleven lg-container">
       <div className="container">
         <div className="row">
           <div className="col-xl-7 col-lg-6">
             <div className="hero-text-wrapper">
-              <h1>
+              {abTestText}
+              {/* <h1>
                 Edit & Sign <br /> PDF{" "}
                 <span>
                   documents
@@ -23,9 +34,8 @@ const HeroBannerEleven = () => {
               </h1>
               <p className="hero-sub-heading">
                 Document edit, workflow, simplified
-              </p>
+              </p> */}
               <FormDemo />
-              <p className="term-text">No credit card required</p>
             </div>
             {/* .hero-text-wrapper */}
           </div>
@@ -44,8 +54,7 @@ const HeroBannerEleven = () => {
           <div className="row">
             <div className="col-xl-8 col-lg-10 col-md-10 m-auto">
               <p className="text-center text-lg">
-                Join <span>27,000+</span> companies who’ve reached document
-                workflow with Deski
+                <span>More than 8</span> of the most widely <br />used networks are supported.<br /> Soon we <span>will connect 4</span> more networks.
               </p>
             </div>
           </div>

@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <div className="main-page-wrapper p0">
       <Helmet>
-        <title>Not Found || Deski-Saas & Software React Template</title>
+        <title>Not Found</title>
       </Helmet>
       {/* End Page SEO Content */}
 
@@ -26,7 +26,7 @@ const NotFound = () => {
         <div className="text-wrapper order-lg-first">
           <div className="logo">
             <Link to="/">
-              <img src="images/logo/deski_05.svg" alt="logo" />
+              <img src="images/logo/deski_05.png" alt="logo" width={160} height={35} />
             </Link>
           </div>
           <h1 className="font-slab">
@@ -35,8 +35,7 @@ const NotFound = () => {
             be Found.
           </h1>
           <p className="font-rubik">
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat
+            But you can still protect your wallet
           </p>
 
           <Link

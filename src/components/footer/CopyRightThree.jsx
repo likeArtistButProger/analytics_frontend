@@ -3,16 +3,8 @@ import { Link } from "react-router-dom";
 
 const socialContent = [
   {
-    icon: "fa-facebook",
-    link: "https://www.facebook.com/",
-  },
-  {
-    icon: "fa-twitter",
-    link: "https://twitter.com/",
-  },
-  {
-    icon: "fa-linkedin",
-    link: "https://www.linkedin.com/",
+    icon: "fa-telegram",
+    link: "https://t.me/buff_10",
   },
 ];
 
@@ -59,9 +51,9 @@ const CopyRightThree = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ib-themes
+            CheckYourWallet
           </a>{" "}
-          inc.
+          {/* inc. */}
         </p>
       </div>
     </div>

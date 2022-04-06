@@ -3,16 +3,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import HeaderLandingDocSignature from "../../components/header/landing/HeaderLandingDocSignature";
 import HeroBannerEleven from "../../components/hero-banner/HeroBannerEleven";
-import FancyFeatureTewentySeven from "../../components/features/FancyFeatureTewentySeven";
 import FancyFeatureTewentySix from "../../components/features/FancyFeatureTewentySix";
-import BrandSix from "../../components/brand/BrandSix";
-import FancyFeatureTewentyEight from "../../components/features/FancyFeatureTewentyEight";
-import FancyVideoFour from "../../components/video/FancyVideoFour";
-import FaqClassicThree from "../../components/faq/FaqClassicThree";
 import CallToActionSix from "../../components/call-to-action/CallToActionSix";
-import PricingEight from "../../components/pricing/PricingEight";
-import FancyFeatureTewentyNine from "../../components/features/FancyFeatureTewentyNine";
-import FooterSeven from "../../components/footer/FooterSeven";
 import CopyRightThree from "../../components/footer/CopyRightThree";
 
 const DocSignatureLanding = () => {
@@ -21,7 +13,7 @@ const DocSignatureLanding = () => {
       <Helmet>
         <title>
           {" "}
-          Doc Signature Landing || Deski-Saas & Software React Template
+          Check Your Wallet | Manage your approvals
         </title>
       </Helmet>
       {/* End Page SEO Content */}
@@ -45,7 +37,68 @@ const DocSignatureLanding = () => {
       {/* =============================================
             Fancy Feature Twenty Seven
         ============================================== */}
-      <div
+        <div className="fancy-feature-twentySeven lg-container pt-120  md-pt-60" id="product">
+          <div className="container">
+            <div className="title-style-twelve text-center mb-70 md-mb-20">
+              <div className="row">
+                <div className="col-xl-10 col-lg-11 m-auto">
+                  <div className="upper-title">
+                    Free and secure
+                  </div>
+                  <h2>
+                    <span>
+                      Check your wallet <br />for a dangerous approvals <img src="images/shape/line-shape-13.svg" alt="line-shape"/>
+                    </span>
+                  </h2>
+                  <p className="mt-40 md-mt-30">
+                    We developed this service specifically to make DeFi users feel safe using their wallets.<br />So that you know for sure that only you have access to your funds.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-3 col-sm-6 aos-init" data-aos="fade-up" data-aos-delay="">
+                <div className="block-style-twentySeven">
+                  <div className="icon d-flex align-items-end justify-content-center">
+                    <img src="images/icon/144.svg" alt="icon" />
+                    </div>
+                    <h4 className="font-gordita">
+                      Approvals
+                    </h4>
+                    <p>CheckYourWallet displays all approvals in all networks.</p>
+                  </div>
+                </div>
+              <div className="col-lg-3 col-sm-6 aos-init" data-aos="fade-up" data-aos-delay="100">
+              <div className="block-style-twentySeven">
+                <div className="icon d-flex align-items-end justify-content-center">
+                  <img src="images/icon/145.svg" alt="icon" />
+                </div>
+                <h4 className="font-gordita">Stay informed</h4>
+                <p>Convenient notifications on all events with the wallet.</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-sm-6 aos-init" data-aos="fade-up" data-aos-delay="200">
+              <div className="block-style-twentySeven">
+                <div className="icon d-flex align-items-end justify-content-center">
+                  <img src="images/icon/146.svg" alt="icon" />
+                </div>
+                <h4 className="font-gordita">Easy manage</h4>
+                <p>User-friendly interface for managing approvals</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-sm-6 aos-init" data-aos="fade-up" data-aos-delay="300">
+            <div className="block-style-twentySeven">
+              <div className="icon d-flex align-items-end justify-content-center">
+                <img src="images/icon/147.svg" alt="icon" />
+              </div>
+              <h4 className="font-gordita">Stay safe</h4>
+              <p>Don't let outside projects have access to your assets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* <div
         className="fancy-feature-twentySeven lg-container pt-120  md-pt-60"
         id="product"
       >
@@ -73,7 +126,7 @@ const DocSignatureLanding = () => {
           </div>
           <FancyFeatureTewentySeven />
         </div>
-      </div>
+      </div> */}
       {/* /.fancy-feature-twentySeven */}
 
       {/* =============================================
@@ -284,11 +337,11 @@ const DocSignatureLanding = () => {
       {/* =====================================================
             Footer Style Seven
         ===================================================== */}
-      <footer className="theme-footer-seven mt-120 md-mt-100">
+      <footer className="theme-footer-seven md-mt-100">
         <div className="lg-container">
-          <div className="container inner-btn-black">
+          {/* <div className="container inner-btn-black">
             <FooterSeven />
-          </div>
+          </div> */}
 
           <div className="container">
             <div className="bottom-footer">
