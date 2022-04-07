@@ -1,14 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const TermsOfUse = () => {
+    const history = useHistory();
+
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div style={{ padding: 20 }}>
-            <span>
-                <Link to="/var=1">
-                    <i className="fa-arrow-left"></i>
+            <span onClick={goBack} style={{ cursor: "pointer" }}>
+                <a>
+                    <svg style={{ marginRight: 5 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(115, 115,115)" d="M0 12l9-8v6h15v4h-15v6z"/></svg>
                     back
-                </Link>
+                </a>
             </span>
             <h1>Privacy Policy of CheckYourWallet</h1>
             <br />
