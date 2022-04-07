@@ -10152,6 +10152,7 @@ body .theme-btn-thirteen:hover {
   top: 22px;
   right: 70px;
   max-width: 46%;
+  z-index: -1;
 }
 .hero-banner-seven .illustration-container img {
   animation: jumpTwo 6s infinite linear;
@@ -12765,6 +12766,7 @@ body .theme-btn-thirteen:hover {
   top: -10%;
   right: 4%;
   max-width: 46%;
+  z-index: -1;
 }
 /*----------------- Fancy Feature Twenty Six -------------------*/
 .fancy-feature-twentySix .row {

@@ -41,7 +41,7 @@ const HeaderLandingDocSignature = () => {
         <div className="d-flex align-items-center justify-content-center">
           <div className="logo">
             <Link to="/event-organizer">
-              <img src="images/logo/deski_06.svg" alt="brand" />
+              <img src="images/logo/deski_05.png" width={200} height={45} alt="brand" />
             </Link>
           </div>
           {/* End logo */}

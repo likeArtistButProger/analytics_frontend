@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const socialContent = [
@@ -9,6 +9,7 @@ const socialContent = [
 ];
 
 const CopyRightThree = () => {
+
   return (
     <div className="row">
       <div className="col-lg-4 order-lg-1 mb-20">
@@ -20,10 +21,10 @@ const CopyRightThree = () => {
             "
         >
           <li>
-            <Link to="/terms-conditions">Privacy & Terms.</Link>
+            <Link to="/terms-of-use">Privacy & Terms.</Link>
           </li>
           <li>
-            <Link to="/contact-cs">Contact Us</Link>
+            <a href="mailto:niklpn74@gmail.com">Contact Us</a>
           </li>
         </ul>
       </div>
