@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useWeb3React } from "@web3-react/core";
-import { Injected } from "../../constants/connectors";
+import { Injected } from "../../constantss/connectors";
 import { signWallet } from "../../api/sign-wallet";
 
 const HeaderPopupForm = () => {

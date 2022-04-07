@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import Scrollspy from "react-scrollspy";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
-import HeaderPopupForm from "../../form/HeaderPopupForm";
+import { useAuthorizeModal } from "../../../hooks";
 
 Modal.setAppElement("#root");
 
 const HeaderLandingDocSignature = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
   const [navbar, setNavbar] = useState(false);
-
-  function toggleModalOne() {
-    setIsOpen(!isOpen);
-  }
+  const { showModal } = useAuthorizeModal();
 
   const changeBackground = () => {
     if (window.scrollY >= 90) {
@@ -49,7 +45,7 @@ const HeaderLandingDocSignature = () => {
           <nav id="mega-menu-holder" className="navbar navbar-expand-lg">
             <div className="container nav-container">
               <div className="mob-header">
-                <button className="toggler-menu" onClick={handleClick}>
+                <button className="toggler-menu" onClick={showModal}>
                   <div className={click ? "active" : ""}>
                     <span></span>
                     <span></span>
@@ -101,7 +97,7 @@ const HeaderLandingDocSignature = () => {
             </div>
           </nav>
           <div className="right-widget">
-            <button className="demo-button" onClick={toggleModalOne}>
+            <button className="demo-button" onClick={showModal}>
               <span>Join Waitlist</span>
               <img src="images/icon/user.svg" alt="icon" />
             </button>
@@ -116,49 +112,15 @@ const HeaderLandingDocSignature = () => {
           <Link to="/event-organizer">
             <img src="images/logo/deski_06.svg" alt="brand" />
           </Link>
-          <div className="fix-icon text-dark" onClick={handleClick}>
+          <div className="fix-icon text-dark" onClick={showModal}>
             <img src="images/icon/close.svg" alt="icon" />
           </div>
           {/* Mobile Menu close icon */}
         </div>
-
-        <Scrollspy
-          className="navbar-nav"
-          id="theme-menu-list"
-          items={["product", "feature", "story", "pricing", "faq"]}
-          currentClassName="active"
-          offset={-200}
-        >
-          <li className="nav-item">
-            <a href="#product" className="nav-link" onClick={handleClick}>
-              Product
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#feature" className="nav-link" onClick={handleClick}>
-              Features
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#story" className="nav-link" onClick={handleClick}>
-              Stories
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#pricing" className="nav-link" onClick={handleClick}>
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#faq" className="nav-link" onClick={handleClick}>
-              FAQ’s
-            </a>
-          </li>
-        </Scrollspy>
       </div>
       {/* Mobile Menu End */}
 
-      <Modal
+      {/* <Modal
         isOpen={isOpen}
         onRequestClose={toggleModalOne}
         contentLabel="My dialog"
@@ -171,7 +133,6 @@ const HeaderLandingDocSignature = () => {
             <button className="close" onClick={toggleModalOne}>
               <img src="images/icon/close.svg" alt="close" />
             </button>
-            {/* End close icon */}
 
             <div className="left-side">
               <div className="d-flex flex-column justify-content-between h-100">
@@ -190,17 +151,14 @@ const HeaderLandingDocSignature = () => {
                 />
               </div>
             </div>
-            {/* /.left-side */}
 
             <div className="right-side">
               <h2 className="form-title">Contact us</h2>
               <HeaderPopupForm />
             </div>
-            {/*  /.right-side */}
           </main>
-          {/* /.main-body */}
         </div>
-      </Modal>
+      </Modal> */}
       {/* End  Modal For Request a demo */}
     </>
   );

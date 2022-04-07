@@ -6,6 +6,7 @@ import { Web3ReactProvider } from "@web3-react/core";
 import AOS from "aos";
 import {I18nextProvider} from 'react-i18next';
 import i18n from "./i18n";
+import AuthorizeModalProvider from "./AuthorizeModal/AuthorizeModalProvider";
 
 import "aos/dist/aos.css";
 import { ethers } from "ethers";
@@ -26,34 +27,36 @@ const App = () => {
 
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      <I18nextProvider i18n={i18n}>
-        <Helmet>
-          <title>Deski - Saas & Software React Template</title>
-          <meta property="og:site_name" content="deski" />
-          <meta
-            property="og:url"
-            content="https://themeforest.net/user/ib-themes"
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Deski: Creative Saas & Software React Template"
-          />
-          <meta
-            name="keywords"
-            content="agency, bootstrap 5, business, clean, corporate, creative, fullpage, minimal, modern, multipurpose, parallax, personal, photography, portfolio, showcase, Digital marketing agency, Digital marketing company, Digital marketing services, sass, software company"
-          />
-          <meta
-            name="description"
-            content="Deski is a creative saas and software React template designed for saas and software Agency websites."
-          />
-          <meta name="description" content="Portfolio & Agency React Template" />
-        </Helmet>
-        {/* End Seo Helmt */}
+      <AuthorizeModalProvider>
+        <I18nextProvider i18n={i18n}>
+          <Helmet>
+            <title>Check Your Wallet | Manage your approvals</title>
+            <meta property="og:site_name" content="deski" />
+            <meta
+              property="og:url"
+              content="https://themeforest.net/user/ib-themes"
+            />
+            <meta property="og:type" content="website" />
+            <meta
+              property="og:title"
+              content="Check Your Wallet | Manage your approvals"
+            />
+            <meta
+              name="keywords"
+              content="Crypto, Cybersecurity, Security, Wallet Security"
+            />
+            <meta
+              name="description"
+              content="Free and Secure. Check your wallet approvals and what projects you gave access to. Disable dangerous approvals in 1 click!"
+            />
+            <meta name="description" content="Portfolio & Agency React Template" />
+          </Helmet>
+          {/* End Seo Helmt */}
 
-        <ScrollToTop />
-        <Routes />
-      </I18nextProvider>
+          <ScrollToTop />
+          <Routes />
+        </I18nextProvider>
+      </AuthorizeModalProvider>
     </Web3ReactProvider>
   );
 };

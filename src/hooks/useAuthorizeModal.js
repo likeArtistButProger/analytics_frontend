@@ -1,0 +1,1 @@
+export { useAuthorizeModal } from '../AuthorizeModal';

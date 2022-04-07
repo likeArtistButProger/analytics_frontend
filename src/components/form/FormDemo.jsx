@@ -1,7 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import React, { useEffect, useState } from "react";
 import { signWallet } from "../../api/sign-wallet";
-import { Injected } from "../../constants/connectors";
 
 const FormEvent = () => {
   const { activate, account, chainId } = useWeb3React();
@@ -9,7 +8,7 @@ const FormEvent = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    activate(Injected);
+    // activate(Injected);
   };
 
   useEffect(() => {
