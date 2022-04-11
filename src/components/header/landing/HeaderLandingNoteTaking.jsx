@@ -33,6 +33,9 @@ const HeaderLandingNoteTaking = () => {
             ? "theme-main-menu sticky-menu theme-menu-five fixed"
             : "theme-main-menu sticky-menu theme-menu-five"
         }
+        style={{
+          background: navbar ? "#FFFFFF" : "initial"
+        }}
       >
         <div className="d-flex align-items-center justify-content-center">
           <div className="logo">

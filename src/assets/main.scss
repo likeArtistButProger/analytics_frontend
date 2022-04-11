@@ -38,3 +38,12 @@ Primary use:  ib-themes
 @import "./scss/custom-reactify";
 @import "./scss/dark";
 @import "./scss/responsive";
+
+h1 {
+    font-size: 78px !important;
+}
+
+h2 {
+    font-size: 48px !important;
+    line-height: 1.2em !important;
+}
