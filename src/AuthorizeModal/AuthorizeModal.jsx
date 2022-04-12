@@ -10,7 +10,7 @@ import { useClickOutside } from "../hooks";
 const AuthorizeModal = () => {
     const Modal = useRef(null);
 
-    const { activate, active, error } = useWeb3React();
+    const { account, activate, active, error } = useWeb3React();
     const { hideModal } = useAuthorizeModal();
 
     const connectWallet = (wallet) => {
@@ -61,6 +61,7 @@ const AuthorizeModal = () => {
                             {/* <br /> */}
                             <h5>You'll  be the first to know about the launch of the project and you'll be pleasantly rewarded for your wait! <br />
                             In the meantime, you can join our group to keep up with the announcements.</h5>
+                            <h5>{account}</h5>
                         </div>
                     }
                     {
