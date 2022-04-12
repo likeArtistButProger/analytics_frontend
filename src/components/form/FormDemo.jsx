@@ -16,9 +16,7 @@ const FormEvent = () => {
   // }, [account, chainId]);
 
   return (
-    <form>
-      <button onClick={showModal}>Join Waitlist</button>
-    </form>
+    <button onClick={showModal}>Join Waitlist</button>
   );
 };
 

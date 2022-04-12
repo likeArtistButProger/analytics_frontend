@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const socialContent = [
   {
     icon: "fa-telegram",
-    link: "https://t.me/buff_10",
+    link: "https://t.me/checkyourwallet",
   },
 ];
 

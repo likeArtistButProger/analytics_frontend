@@ -33,17 +33,20 @@ const HeaderLandingDocSignature = () => {
             ? "theme-main-menu sticky-menu theme-menu-five fixed"
             : "theme-main-menu sticky-menu theme-menu-five"
         }
-      >
+        style={{
+          marginTop: 0,
+          paddingTop: 30,
+          paddingBottom: 10
+        }}
+      > 
         <div
           className="d-flex align-items-center justify-content-center"
           style={{
-            height: 60
+            height: 60,
           }}
         >
           <div className="logo">
-            <Link to="/">
-              <img src="images/logo/deski_05.png" width={250} height={60} alt="brand" />
-            </Link>
+            <img src="images/logo/deski_05.png" width={250} height={60} alt="brand" />
           </div>
           {/* End logo */}
 
@@ -65,13 +68,13 @@ const HeaderLandingDocSignature = () => {
                 id="navbarSupportedContent"
               >
                 <div className="d-lg-flex justify-content-between align-items-center">
-                  <Scrollspy
+                  {/* <Scrollspy
                     className="navbar-nav  main-side-nav font-gordita"
                     items={["product", "feature", "story", "pricing", "faq"]}
                     currentClassName="active"
                     offset={-500}
                   >
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                       <a href="#product" className="nav-link">
                         Product
                       </a>
@@ -95,8 +98,8 @@ const HeaderLandingDocSignature = () => {
                       <a href="#faq" className="nav-link">
                         FAQ’s
                       </a>
-                    </li> */}
-                  </Scrollspy>
+                    </li>
+                  </Scrollspy> */}
                 </div>
               </div>
             </div>
