@@ -24,7 +24,7 @@ const CopyRightThree = () => {
             <Link to="/terms-of-use">Privacy & Terms.</Link>
           </li>
           <li>
-            <a href="mailto:niklpn74@gmail.com">Contact Us</a>
+            <a href="mailto:support@checkyourwallet.io">Contact Us</a>
           </li>
         </ul>
       </div>
