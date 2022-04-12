@@ -58,7 +58,7 @@ const AuthorizeModal = () => {
                         </div>
                     }
                     {
-                        error?.name === "NoEthereumProviderError" &&
+                        error &&
                         <div className="error-msg" style={{ textAlign: "center" }}>
                             Please insrall browser <br />
                             plugin or wallet app and refresh this page. <br />
