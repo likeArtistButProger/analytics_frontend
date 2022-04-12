@@ -97,8 +97,11 @@ import TermsOfUse from "../views/TermsOfUse";
 // Route Specific
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollTopBehaviour from "../components/ScrollTopBehaviour";
+import { useAutoConnect } from "../hooks";
 
 const Routes = () => {
+  useAutoConnect();
+
   return (
     <>
       <Router>

@@ -28,6 +28,13 @@
     min-width: 300px;
 }
 
+.success-msg {
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    min-width: 300px;
+}
+
 .modal-conn {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -72,7 +79,9 @@
 }
 
 .terms {
+    max-width: 800px;
     padding: 5px 10px 10px;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -80,7 +89,7 @@
     background: #FFFFFF;
     border-radius: 20px;
     min-width: 300px;
-    padding: 10px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 960px) {

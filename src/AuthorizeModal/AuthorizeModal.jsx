@@ -47,23 +47,32 @@ const AuthorizeModal = () => {
                                 }
                             </div>
                             <div className="terms">
-                                ГОТОВО УРА
+                                <h4>Join waitlist</h4>
+                                <h5>Connect your favorite wallet to join waitlist and be the first to know about the launch of the project.</h5>
                             </div>
                         </div>
                     }
                     {
                         active &&
-                        <div className="wallets" style={{ textAlign: "center" }}>
-                            УРА ТЫ ПОБЕДИЛ
+                        <div className="success-msg" style={{ textAlign: "center" }}>
+                            <h3>Congratulations! </h3>
+                            {/* <br /> */}
+                            <h4>You have been added to the waiting list!</h4>
+                            {/* <br /> */}
+                            <h5>You'll  be the first to know about the launch of the project and you'll be pleasantly rewarded for your wait! <br />
+                            In the meantime, you can join our group to keep up with the announcements.</h5>
                         </div>
                     }
                     {
                         error &&
                         <div className="error-msg" style={{ textAlign: "center" }}>
-                            Please insrall browser <br />
-                            plugin or wallet app and refresh this page. <br />
-                            For example we recommend {" "}
-                            <a style={{ color: "blue" }} href="https://metamask.io/" target="_blank" referrerPolicy="no-referrer">Metamask</a>
+                            <h3>You can't join waitlist :( </h3>
+                            {/* <br /> */}
+                            <h4>Please install browser plugin or wallet app and refresh this page.</h4> 
+                            {/* <br /> */}
+                            <h5>For example, we recommend <a style={{ color: "blue" }} href="https://metamask.io/" target="_blank" referrerPolicy="no-referrer">Metamask</a></h5>
+                            {/* <br /> */}
+                            If you can't install browser plugin or wallet - you can join us <a style={{ color: "blue" }} href="https://t.me/checkyourwallet" target="_blank" referrerPolicy="no-referrer">https://t.me/checkyourwallet</a>
                         </div>
                     }
                 </div>
