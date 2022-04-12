@@ -1,4 +1,5 @@
 import React from "react";
+import { useAuthorizeModal } from "../../hooks";
 
 const featuresContent = [
   {
@@ -20,13 +21,15 @@ const featuresContent = [
 ];
 
 const FancyFeatureTewentySix = () => {
+  const { showModal } = useAuthorizeModal();
+
   return (
     <div className="row">
       <div className="col-md-6 aos-init aos-animate" data-aos="fade-right">
         <div className="block-style-twentySix text-center mb-40 color-variatin-one">
           <h6>Active DeFi user?</h6>
           <h4>Check the approvals - <br />save your savings!</h4>
-          <a href="#" className="try-btn">Join waitlist for check your wallet!</a>
+          <button onClick={showModal} className="try-btn">Join waitlist for check your wallet!</button>
           <img src="images/shape/222.jpg" alt="shape" className="shapes shape-one" />
           <img src="images/shape/223.jpg" alt="shape" className="shapes shape-two" />
         </div>
@@ -35,7 +38,7 @@ const FancyFeatureTewentySix = () => {
         <div className="block-style-twentySix text-center mb-40 color-variatin-two">
           <h6>Collecting NFTs?</h6>
           <h4>Are you sure that your NFT's <br /> belong only to you?</h4>
-          <a href="#" className="try-btn">It's time to check this!</a>
+          <button onClick={showModal} className="try-btn">It's time to check this!</button>
           <img src="images/shape/224.jpg" alt="shape" className="shapes shape-one" />
           <img src="images/shape/225.jpg" alt="shape" className="shapes shape-two" />
         </div>

@@ -34,10 +34,15 @@ const HeaderLandingDocSignature = () => {
             : "theme-main-menu sticky-menu theme-menu-five"
         }
       >
-        <div className="d-flex align-items-center justify-content-center">
+        <div
+          className="d-flex align-items-center justify-content-center"
+          style={{
+            height: 60
+          }}
+        >
           <div className="logo">
-            <Link to="/event-organizer">
-              <img src="images/logo/deski_05.png" width={200} height={45} alt="brand" />
+            <Link to="/">
+              <img src="images/logo/deski_05.png" width={250} height={60} alt="brand" />
             </Link>
           </div>
           {/* End logo */}
@@ -109,7 +114,7 @@ const HeaderLandingDocSignature = () => {
       {/* Mobile Menu Start */}
       <div className={click ? "mobile-menu  menu-open" : "mobile-menu"}>
         <div className="logo order-md-1">
-          <Link to="/event-organizer">
+          <Link to="/">
             <img src="images/logo/deski_06.svg" alt="brand" />
           </Link>
           <div className="fix-icon text-dark" onClick={showModal}>

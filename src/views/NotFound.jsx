@@ -26,7 +26,7 @@ const NotFound = () => {
         <div className="text-wrapper order-lg-first">
           <div className="logo">
             <Link to="/">
-              <img src="images/logo/deski_05.png" alt="logo" width={160} height={35} />
+              <img src="images/logo/deski_05.png" alt="logo" width={250} height={60} />
             </Link>
           </div>
           <h1 className="font-slab">
@@ -39,7 +39,7 @@ const NotFound = () => {
           </p>
 
           <Link
-            to="/event-organizer"
+            to="/"
             className="back-home font-rubik d-flex align-items-center justify-content-center"
           >
             <span>Back to Home</span>

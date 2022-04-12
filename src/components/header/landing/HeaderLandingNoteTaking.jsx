@@ -39,9 +39,7 @@ const HeaderLandingNoteTaking = () => {
       >
         <div className="d-flex align-items-center justify-content-center">
           <div className="logo">
-            <Link to="/doc-landing">
-              <img src="images/logo/deski_06.svg" alt="brand" />
-            </Link>
+            <img src="images/logo/deski_06.svg" alt="brand" />
           </div>
           {/* End logo */}
 

@@ -1,6 +1,9 @@
 import React from "react";
+import { useAuthorizeModal } from "../../hooks";
 
 const CallToActionSix = () => {
+  const { showModal } = useAuthorizeModal();
+
   return (
     <div className="title-style-twelve">
     <h2>
@@ -12,7 +15,7 @@ const CallToActionSix = () => {
       Check your wallet's dangerous approvals <br />for free and securely and
       protect it in 1 click!<br />
     </p>
-    <a href="#" className="theme-btn-nine">Join waitlist</a>
+    <button onClick={showModal} className="theme-btn-nine">Join waitlist</button>
   </div>
   );
 };
