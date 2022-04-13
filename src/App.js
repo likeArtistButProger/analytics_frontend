@@ -7,7 +7,6 @@ import AOS from "aos";
 import {I18nextProvider} from 'react-i18next';
 import i18n from "./i18n";
 import AuthorizeModalProvider from "./AuthorizeModal/AuthorizeModalProvider";
-import { useAutoConnect } from "./hooks";
 
 import "aos/dist/aos.css";
 import { ethers } from "ethers";

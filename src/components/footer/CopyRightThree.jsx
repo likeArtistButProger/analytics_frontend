@@ -24,7 +24,7 @@ const CopyRightThree = () => {
             <Link to="/terms-of-use">Privacy & Terms.</Link>
           </li>
           <li>
-            <a href="mailto:support@checkyourwallet.io">Contact Us</a>
+            <a href="https://t.me/checkyourwallet" referrerPolicy="no-referrer" target="_blank">Contact Us</a>
           </li>
         </ul>
       </div>
