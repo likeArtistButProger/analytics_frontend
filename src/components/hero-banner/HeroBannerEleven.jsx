@@ -12,15 +12,12 @@ const HeroBannerEleven = () => {
   const { t } = useTranslation();
 
   const abTestText = useMemo(() => {
-    console.log(variant);
     if(variant > 0 && variant < 9 && !isNaN(variant)) {
       return parse(t(`var-${variant}`));
     } else {
       return parse(t("var-2"));
     }
   }, [variant]);
-
-  console.log(abTestText);
 
   return (
     <div className="hero-banner-eleven lg-container">

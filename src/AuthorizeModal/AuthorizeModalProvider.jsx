@@ -2,6 +2,8 @@ import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { WALLETS, connectorKey } from '../constants';
 import Modal from "react-modal";
+import { writeWallet, checkWallet } from "../api/wallet";
+import qs from "qs";
 
 import "./styles.scss";
 
@@ -11,7 +13,7 @@ const AuthorizeModalContext = React.createContext({
 })
 
 const AuthorizeModalProvider = ({children}) => {
-    const { account, activate, active, error, setError } = useWeb3React();
+    const { account, activate, active, chainId, error, setError } = useWeb3React();
     const [show, setShow] = useState(false);
 
     const showModal = useCallback(() => {
@@ -20,7 +22,7 @@ const AuthorizeModalProvider = ({children}) => {
 
     const hideModal = useCallback(() => {
         setShow(false);
-        setError(null);
+        // setError(null);
     }, [setShow]);
 
     const connectWallet = async (wallet) => {
@@ -35,6 +37,34 @@ const AuthorizeModalProvider = ({children}) => {
             localStorage.removeItem(connectorKey);
         }
     }, [error])
+
+    useEffect(() => {
+        const updateWallet = async () => {
+            const wallet = localStorage.getItem(connectorKey);
+
+            if(!!account && !!chainId && !!wallet) {
+                const exists = await checkWallet(account);
+
+                if(exists) {
+                    showModal();
+                } else {
+                    const querystring = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+                    const variant = parseInt(querystring.var);
+                    let abTestVersion;
+        
+                    if(variant > 0 && variant < 9 && !isNaN(variant)) {
+                        abTestVersion = variant.toString();
+                    } else {
+                        abTestVersion = "0";
+                    }
+        
+                    writeWallet(chainId, account, abTestVersion, wallet);
+                }
+            }
+        }
+
+        updateWallet();
+    }, [account, chainId, active]);
 
     return (
         <AuthorizeModalContext.Provider

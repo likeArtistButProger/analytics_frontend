@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useWeb3React } from "@web3-react/core";
 import { Injected } from "../../constantss/connectors";
-import { signWallet } from "../../api/sign-wallet";
+// import { signWallet } from "../../api/sign-wallet";
 
 const HeaderPopupForm = () => {
   const { account, chainId, activate } = useWeb3React();
@@ -37,7 +37,7 @@ const HeaderPopupForm = () => {
     console.log(account, chainId);
     if(!!account && !!chainId) {
       // console.log(formState);
-      signWallet(chainId, account, formState.email);
+      // signWallet(chainId, account, formState.email);
     }
   }, [account, chainId]);
 
