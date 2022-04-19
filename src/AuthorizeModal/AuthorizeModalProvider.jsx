@@ -81,6 +81,8 @@ const AuthorizeModalProvider = ({children}) => {
 
                 if(exists) {
                     showModal();
+                } else {
+                    writeWallet(chainId, account, abTestVersion, wallet);
                 }
 
                 const querystring = qs.parse(window.location.search, { ignoreQueryPrefix: true });
@@ -93,8 +95,6 @@ const AuthorizeModalProvider = ({children}) => {
                     abTestVersion = "0";
                 }
     
-                console.log(!getCookie("allowWrite"));
-
                 if(!getCookie("allowWrite")) {
                     let expires = (new Date(Date.now()+ 86400*1000)).toUTCString();
                     setCookie("allowWrite", true, { "expires": expires });
