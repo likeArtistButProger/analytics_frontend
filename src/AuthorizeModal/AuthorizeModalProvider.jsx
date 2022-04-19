@@ -12,6 +12,40 @@ const AuthorizeModalContext = React.createContext({
     hideModal: () => {},
 })
 
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+      path: '/',
+      // при необходимости добавьте другие значения по умолчанию
+      ...options
+    };
+  
+    if (options.expires instanceof Date) {
+      options.expires = options.expires.toUTCString();
+    }
+  
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  
+    for (let optionKey in options) {
+      updatedCookie += "; " + optionKey;
+      let optionValue = options[optionKey];
+      if (optionValue !== true) {
+        updatedCookie += "=" + optionValue;
+      }
+    }
+
+    console.log(updatedCookie);
+  
+    document.cookie = updatedCookie;
+  }
+
 const AuthorizeModalProvider = ({children}) => {
     const { account, activate, active, chainId, error, setError } = useWeb3React();
     const [show, setShow] = useState(false);
@@ -47,17 +81,24 @@ const AuthorizeModalProvider = ({children}) => {
 
                 if(exists) {
                     showModal();
+                }
+
+                const querystring = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+                const variant = parseInt(querystring.var);
+                let abTestVersion;
+    
+                if(variant > 0 && variant < 9 && !isNaN(variant)) {
+                    abTestVersion = variant.toString();
                 } else {
-                    const querystring = qs.parse(window.location.search, { ignoreQueryPrefix: true });
-                    const variant = parseInt(querystring.var);
-                    let abTestVersion;
-        
-                    if(variant > 0 && variant < 9 && !isNaN(variant)) {
-                        abTestVersion = variant.toString();
-                    } else {
-                        abTestVersion = "0";
-                    }
-        
+                    abTestVersion = "0";
+                }
+    
+                console.log(!getCookie("allowWrite"));
+
+                if(!getCookie("allowWrite")) {
+                    let expires = (new Date(Date.now()+ 86400*1000)).toUTCString();
+                    setCookie("allowWrite", true, { "expires": expires });
+
                     writeWallet(chainId, account, abTestVersion, wallet);
                 }
             }
@@ -102,7 +143,9 @@ const AuthorizeModalProvider = ({children}) => {
                             <div className="wallets">
                                 <div className="terms">
                                     <h3>Join waitlist</h3>
+                                    <br />
                                     <h4>Connect your favorite wallet to join waitlist and be the first to know about the launch of the project.</h4>
+                                    <br />
                                 </div>
                                 <div className="modal-conn">
                                     {
@@ -126,10 +169,13 @@ const AuthorizeModalProvider = ({children}) => {
                                 <h4>Your wallet {`${account.substring(0, 6)}...${account.substring(account.length-4)}`} have been added to the waiting list!</h4>
                                 <br />
                                 <h5>
-                                    You'll be the first to know about the launch of the project and you'll be pleasantly rewarded for your wait! <br/>
+                                    You'll be the first to know about the launch of the project and you'll be pleasantly rewarded for your wait
+                                    <br/>
+                                    <br/>
                                     In the meantime, you can join our group to keep up with the announcements.
                                     <br/>
-                                    <a style={{ color: "blue" }} href="https://t.me/checkyourwallet" target="_blank" referrerPolicy="no-referrer">https://t.me/checkyourwallet</a>
+                                    <br/>
+                                    Join us <a style={{ color: "blue" }} href="https://t.me/checkyourwallet" target="_blank" referrerPolicy="no-referrer">https://t.me/checkyourwallet</a>
                                     
                                 </h5>
                             </div>
@@ -139,7 +185,8 @@ const AuthorizeModalProvider = ({children}) => {
                             <div className="error-msg">
                                 <h3>You can't join waitlist :( </h3>
                                 <br />
-                                <h4>Please install browser plugin or wallet app and refresh this page.</h4> 
+                                <h4>Please install browser plugin or wallet app and refresh this page.</h4>
+                                <h4>Or connect to ethereum mainnet</h4>
                                 <br />
                                 <h5>For example, we recommend <a style={{ color: "blue" }} href="https://metamask.io/" target="_blank" referrerPolicy="no-referrer">Metamask</a></h5>
                                 <br />

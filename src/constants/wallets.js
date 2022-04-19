@@ -3,14 +3,14 @@ import {  Injected, WalletConnect } from './connectors';
 
 export const WALLETS = [
     {
-        name: "Metamask",
-        image: "metamask.svg",
-        connector: Injected
-    },
-    {
         name: "Wallet Connect",
         image: "wallet_connect.png",
         connector: WalletConnect
+    },
+    {
+        name: "Metamask",
+        image: "metamask.svg",
+        connector: Injected
     },
     {
         name: "Trust Wallet",

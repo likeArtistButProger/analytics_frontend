@@ -38,7 +38,7 @@
 .modal-conn {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     position: relative;
     min-width: fit-content;
     height: fit-content;
@@ -51,9 +51,10 @@
 
 .wallet {
     border: 1px solid rgba(195, 195, 195, 0.14);
-    margin-bottom: auto;
     padding: 8px;
-}
+    margin-bottom: auto;
+    text-align: center;
+  }
 
 .wallet-content {
     display: flex;
